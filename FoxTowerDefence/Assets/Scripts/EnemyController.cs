@@ -22,7 +22,6 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         attackTarget = GameObject.FindGameObjectWithTag("Tower");
     }
-
     void Update()
     {
         if(hp < 0f)

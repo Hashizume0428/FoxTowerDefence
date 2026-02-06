@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class EnemyCanvasController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Transform camera;
+
+    private void Start()
     {
-        
+        camera = Camera.main.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        transform.rotation = Camera.main.transform.rotation;
+        transform.LookAt(camera.position);
     }
 }
