@@ -5,6 +5,7 @@ public class EnemyController : MonoBehaviour
 {
     [Header("Enemy Settings")]
     [SerializeField] private float hp;
+    [SerializeField] private float maxHp;
     [SerializeField] private float attackPower;
     [SerializeField] private float defensePower;
     [SerializeField] private float speed;
@@ -18,6 +19,7 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent agent;
     void Start()
     {
+        hp = maxHp;
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         attackTarget = GameObject.FindGameObjectWithTag("Tower");
